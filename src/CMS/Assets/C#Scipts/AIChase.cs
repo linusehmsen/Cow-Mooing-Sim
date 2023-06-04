@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,11 +17,17 @@ public class AIChase : MonoBehaviour
     }
 
     // Update is called once per frame
+    [System.Obsolete]
     void Update()
     {
         distance = Vector2.Distance(transform.position, cow.transform.position);
         Vector2 direction = cow.transform.position - transform.position;
 
         transform.position = Vector2.MoveTowards(this.transform.position, cow.transform.position, speed * Time.deltaTime);
+
+        if ()
+        {
+            Destroy(gameObject);
+        }
     }
 }
