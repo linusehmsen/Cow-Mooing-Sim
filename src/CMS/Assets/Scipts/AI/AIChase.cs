@@ -1,5 +1,3 @@
- using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AIChase : MonoBehaviour
@@ -25,7 +23,7 @@ public class AIChase : MonoBehaviour
 
         transform.position = Vector2.MoveTowards(this.transform.position, cow.transform.position, speed * Time.deltaTime);
 
-        if ()
+        if (cow.active != true)
         {
             Destroy(gameObject);
         }

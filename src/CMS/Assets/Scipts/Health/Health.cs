@@ -13,12 +13,13 @@ public class Health : MonoBehaviour
         currentHealth = maxHealth;
     }
 
+    [Obsolete]
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
         if (currentHealth <= 0)
         {
-            Destroy(cow);
+            cow.active = false;
             Debug.Log("Destroy Da ko Complete");
         }
     }

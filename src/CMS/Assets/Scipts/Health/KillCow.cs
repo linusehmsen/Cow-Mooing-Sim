@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class KillCow : MonoBehaviour
 {
+    [System.Obsolete]
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))

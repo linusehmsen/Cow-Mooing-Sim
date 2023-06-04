@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyWolfSpawner : MonoBehaviour
@@ -22,6 +20,18 @@ public class EnemyWolfSpawner : MonoBehaviour
             int randSpawnPoint = Random.Range(0, enemyWolfPrefabs.Length);
 
             Instantiate(enemyWolfPrefabs[randEnemy], spawnPoints[randSpawnPoint].position, transform.rotation);
+        }
+        if (enemyWolfPrefabs[0] == null)
+        {
+            Destroy(gameObject);
+        }
+        if (enemyWolfPrefabs[1] == null)
+        {
+            Destroy(gameObject);
+        }
+        if (enemyWolfPrefabs[2] == null)
+        {
+            Destroy(gameObject);
         }
     }
 }
