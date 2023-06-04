@@ -9,7 +9,7 @@ public class KillCow : MonoBehaviour
             var healthComponent = other.GetComponent<Health>();
             if(healthComponent != null)
             {
-                healthComponent.TakeDamage(2);
+                healthComponent.TakeDamage(1);
             }
         }
     }

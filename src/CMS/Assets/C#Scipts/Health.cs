@@ -4,8 +4,8 @@ public class Health : MonoBehaviour
 {
     public GameObject cow;
 
-    public int maxHealth = 20;
-    public int currentHealth;
+    public float maxHealth = 20;
+    public float currentHealth;
 
     void Start()
     {
