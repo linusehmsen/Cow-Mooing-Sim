@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - WolfEnemy
+  - Obstacle
+  - BackGround
+  - HealthPackage
+  - Spawner
+  - HealthBar
+  - GameManager
+  - IdleAnimation
+  - Fences
   layers:
   - Default
   - TransparentFX
