@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Die : MonoBehaviour
+public class EnemyDie : MonoBehaviour
 {
     [SerializeField] float health, maxHealth = 4f;
 
