@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemyDie : MonoBehaviour
 {
-    [SerializeField] float health, maxHealth = 4f;
+    public float health;
+    public float maxHealth = 1f;
 
     private void Start()
     {

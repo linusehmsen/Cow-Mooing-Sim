@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Animation : MonoBehaviour
@@ -13,40 +14,31 @@ public class Animation : MonoBehaviour
 
     private void Start()
     {
-        myAnimator = GetComponent<Animator>();
-        circleCollider2D.enabled = false ;
+
     }
 
-    private void Update()
-    {
-        HandleInput();
-    }
-
-    private void FixedUpdate()
-    {
-        HandleAttacks();
-
-        ResetValues();
-    }
-
-    private void HandleAttacks()
-    {
-        if (attack)
-        {
-            myAnimator.SetTrigger("KillStuff");
-        }
-    }
-
-    void HandleInput()
+    public void CircleCollider2dEnabled()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            attack = true;
+            circleCollider2D.enabled = true;
+            Debug.Log("circleCollider2D.enabled = true;" + "done");
         }
     }
-
-    void ResetValues()
+    
+    [Obsolete]
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        attack = false;
+        if (other.CompareTag("WolfEnemy"))
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                var WolfhealthComponent = other.GetComponent<EnemyDie>();
+                if (WolfhealthComponent != null)
+                {
+                    WolfhealthComponent.TakeDamage(1);
+                }
+            }
+        }
     }
 }
