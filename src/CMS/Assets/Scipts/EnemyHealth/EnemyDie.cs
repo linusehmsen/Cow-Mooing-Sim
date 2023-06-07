@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyDie : MonoBehaviour
 {
     public float health;
-    public float maxHealth = 1f;
+    public float maxHealth = 200f;
 
     private void Start()
     {
@@ -19,6 +17,16 @@ public class EnemyDie : MonoBehaviour
         if(health <= 0)
         {
             Destroy(gameObject);
+        }
+    }
+
+    public void Heal(float damageAmount)
+    {
+        health += damageAmount;
+
+        if (health > maxHealth)
+        {
+            health = maxHealth;
         }
     }
 }
