@@ -5,15 +5,10 @@ public class HealthPackageSpawner : MonoBehaviour
     public Transform[] spawnPoints;
     public GameObject[] healthPackagePrefabs;
 
+    public float nextActionTime = 25.0f;
+    public float period = 25.1f;
+    
 
-
-    public float nextActionTime = 20.0f;
-    public float period = 20.1f;
-
-    public void Start()
-    {
-        
-    }
     void Update()
     {
         if (Time.time > nextActionTime)
