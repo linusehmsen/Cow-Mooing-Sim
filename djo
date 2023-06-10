@@ -1,0 +1,192 @@
+[33mcommit 8cf2d1ba8a32c22d4cdeab64b00528ab966d6f87[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: linusehmsen <133379266+linusehmsen@users.noreply.github.com>
+Date:   Fri Jun 9 20:04:12 2023 +0200
+
+    cache delete
+    
+    cache delete
+
+[33mcommit 923c9857cc372b2056e07a6f15a185cab959bc8b[m
+Author: linusehmsen <133379266+linusehmsen@users.noreply.github.com>
+Date:   Fri Jun 9 19:31:18 2023 +0200
+
+    pizza
+
+[33mcommit dfa1c0e06f6c3f1c3c7ea7042dc7d2cc8dddf9c3[m
+Author: linusehmsen <133379266+linusehmsen@users.noreply.github.com>
+Date:   Fri Jun 9 17:02:14 2023 +0200
+
+    Untrack and ignore src/CMS/Library/PackageCache
+
+[33mcommit b1228abf7398bf358fbfbb60adb977b83f089f61[m
+Merge: d169a91b b920d531
+Author: linusehmsen <133379266+linusehmsen@users.noreply.github.com>
+Date:   Fri Jun 9 16:54:04 2023 +0200
+
+    Added and changed files
+
+[33mcommit b920d531cdd74fad629192a9e940e7f107fb9e4d[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: linusehmsen <linusehmsen@users.noreply.github.com>
+Date:   Thu Jun 8 21:35:43 2023 +0200
+
+    Added Vampire Spawner
+    
+    i added a vampire spawner.
+    When 45 seconds has passed one vampire spawns afterwards they spawn every 5 seconds.
+
+[33mcommit faba942ecd72c37dbe6865d9b2ea0ccb8587384a[m
+Author: linusehmsen <linusehmsen@users.noreply.github.com>
+Date:   Wed Jun 7 22:05:32 2023 +0200
+
+    Animation added small fixes
+    
+    a short description would be that now the game part of the game is finished, a long one would be:
+    
+    I added animations back and i got it working after just one tutorial and now   when you click Mouse0 (primary (normally left) mouse button) the CircleCollider2D enables for 60 frames and I did some code (without tutorials) so now when the player presses Mouse0 (and the collider is enabled) the player will deal some damage to the enemies (only wolves so far) and i did some changes to the HealthPackagesSpawner scipt so that they spawn better now than before.
+    
+    so overall I'd say a good day for CMS.
+
+[33mcommit 019f1b8d7df0159b5851d91719d4e68605d7781a[m
+Author: linusehmsen <linusehmsen@users.noreply.github.com>
+Date:   Tue Jun 6 21:49:58 2023 +0200
+
+    Removed animations + small fixes
+    
+    I removed the animations because i didn't understand them and because í feel like i have to understand unity, c# code and visual studio a bit more before i want to get into the animations.
+    I also did some coding it doesn't work rn but i (hope i)  will fix that tomorrow.
+
+[33mcommit 6339b1945c2528b8461cce54027bc64dba180e05[m
+Author: linusehmsen <linusehmsen@users.noreply.github.com>
+Date:   Mon Jun 5 21:48:54 2023 +0200
+
+    Animation Started(again)
+    
+    I started animation again and i have given up on making the sprite change (for now at least) i hope that i will be done tomorrow(and maybe have the courage to make the sprite change).
+
+[33mcommit b2cb113231ff89b64c539f5775f9e5507fd9c324[m
+Author: linusehmsen <linusehmsen@users.noreply.github.com>
+Date:   Mon Jun 5 21:21:56 2023 +0200
+
+    Sound change
+    
+    I changed soundtrack
+
+[33mcommit 183271eb6722480ff84fdbf8531d94c820bd4497[m
+Author: linusehmsen <linusehmsen@users.noreply.github.com>
+Date:   Mon Jun 5 21:20:04 2023 +0200
+
+    changed tag
+    
+    fences tags are now Fences and not Obstacle
+
+[33mcommit 0ba684addca6ee9952a517f9190d1c5f80c7e74f[m
+Author: linusehmsen <linusehmsen@users.noreply.github.com>
+Date:   Mon Jun 5 21:17:29 2023 +0200
+
+    I added tags
+    
+    i added tags to the things that were "untagged" so that i can use more specific yet simpler code in the future if i want to fx. the fences if i want the Cow(player) to losses damage (fx. 'cause of electricity if i change the fences to electric fences on this level or another) every time they touche the fence the fences tags are Fences.
+
+[33mcommit b60b4ce4efdb21e8a0c5043b59fd193c2fe00d2c[m
+Author: linusehmsen <linusehmsen@users.noreply.github.com>
+Date:   Mon Jun 5 20:12:07 2023 +0200
+
+    changes to animation & healthPackageSpawningsystem
+    
+    i've added the attack(Kill Stuff) animation to the Cow(player) and i've also made the healthPakages spawn at random times instead of every x seconds(9 - 9.01)
+
+[33mcommit e760791d1916f184880550779186787e6fc5cc6e[m
+Author: linusehmsen <linusehmsen@users.noreply.github.com>
+Date:   Sun Jun 4 21:28:40 2023 +0200
+
+    Animation Start
+    
+    I started working on animations
+
+[33mcommit b1156e9d7e0f7424683892c2d7ab104162fe90c7[m
+Author: linusehmsen <linusehmsen@users.noreply.github.com>
+Date:   Sun Jun 4 21:05:43 2023 +0200
+
+    Health and small changes
+    
+    added healthpackeges, amd some other changes
+
+[33mcommit 4e0d601fd0e375ae8ad4ff97a3dd2b64ccfe1d03[m
+Author: linusehmsen <linusehmsen@users.noreply.github.com>
+Date:   Sun Jun 4 16:17:24 2023 +0200
+
+    small changes
+
+[33mcommit e92e1779b9925568b93195a26453434476e01509[m
+Author: linusehmsen <linusehmsen@users.noreply.github.com>
+Date:   Sun Jun 4 02:27:40 2023 +0200
+
+    Quick fixes
+    
+    I did some fixes with the left and right boarders
+
+[33mcommit bb1e0d1963f1894070b161c0948b49865649daca[m
+Author: linusehmsen <linusehmsen@users.noreply.github.com>
+Date:   Sun Jun 4 02:13:26 2023 +0200
+
+    HealthBar Added
+    
+    I added a HealthBar and did some fixes with the CollisionRIght and CollisionLeft.
+
+[33mcommit 85b7419f08fa3c7de8d88852e2956720c52072a6[m
+Author: linusehmsen <linusehmsen@users.noreply.github.com>
+Date:   Sun Jun 4 01:11:26 2023 +0200
+
+    Canvass added
+    
+    i've added a canvas parent GameObject to store all canvass in
+
+[33mcommit 0910e4e11286d0d4fcbe1d159d1560857dcd81e4[m
+Author: linusehmsen <linusehmsen@users.noreply.github.com>
+Date:   Sun Jun 4 00:08:17 2023 +0200
+
+    SoundChange
+    
+    Sound is now quieter it was too loud before
+
+[33mcommit b6835980bdb1f00d88d5104928f22197f623abff[m
+Author: linusehmsen <linusehmsen@users.noreply.github.com>
+Date:   Sun Jun 4 00:05:13 2023 +0200
+
+    No CloudBuild
+    
+    I've set turned unity cloud build off
+
+[33mcommit d169a91bb4eec0fd5513462654804c7d97ec9aa4[m
+Author: linusehmsen <133379266+linusehmsen@users.noreply.github.com>
+Date:   Fri Jun 2 06:59:32 2023 +0200
+
+    commit 2
+
+[33mcommit 24e9e4f355ea0b36d467bd59577a93d1eeb78d8c[m
+Author: linusehmsen <133379266+linusehmsen@users.noreply.github.com>
+Date:   Fri Jun 2 06:46:39 2023 +0200
+
+    Add files via upload
+
+[33mcommit cdf186a2c5e042cba73ba9b8ac3a53f4be48a6dd[m
+Author: linusehmsen <133379266+linusehmsen@users.noreply.github.com>
+Date:   Fri Jun 2 06:45:22 2023 +0200
+
+    Create PlayerControllor.cs
+    
+    Create PlayerControllor.cs
+
+[33mcommit e028433a9073cf92a3181911b4969e0b81bbd99d[m
+Author: linusehmsen <133379266+linusehmsen@users.noreply.github.com>
+Date:   Fri Jun 2 06:31:37 2023 +0200
+
+    initial commit
+    
+    CMS so far
+
+[33mcommit 28ea6a8e1cf2aa9ac2eb897fb82fc47e646803b7[m
+Author: linusehmsen <133379266+linusehmsen@users.noreply.github.com>
+Date:   Thu Jun 1 18:21:24 2023 +0200
+
+    Initial commit
