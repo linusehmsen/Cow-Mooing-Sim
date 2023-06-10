@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class EnemyDie : MonoBehaviour
+public class EnemyVampireDie : MonoBehaviour
 {
     public float health;
-    public float maxHealth = 200f;
+    public float maxHealth = 400f;
 
     private void Start()
     {
@@ -14,7 +14,7 @@ public class EnemyDie : MonoBehaviour
     {
         health -= damageAmount;
 
-        if(health <= 0)
+        if (health <= 0)
         {
             Destroy(gameObject);
         }

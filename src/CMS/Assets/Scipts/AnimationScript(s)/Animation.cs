@@ -17,7 +17,7 @@ public class Animation : MonoBehaviour
         {
          if(circleCollider2D.enabled == true)
             {
-                var WolfhealthComponent = other.GetComponent<EnemyDie>();
+                var WolfhealthComponent = other.GetComponent<EnemyVampireDie>();
                 if (WolfhealthComponent != null)
                 {
                     WolfhealthComponent.TakeDamage(1f);
