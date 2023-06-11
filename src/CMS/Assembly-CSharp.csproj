@@ -59,7 +59,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
     <Compile Include="Assets\Scipts\PlayerMovement\PlayerControllor.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
-    <Compile Include="Assets\Scipts\GameManager\GameManager.cs" />
+    <Compile Include="Assets\Scipts\Managers\GameManager.cs" />
     <Compile Include="Assets\Scipts\AI\AIWolfChase.cs" />
     <Compile Include="Assets\Scipts\AI\AIVampireChase.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -114,6 +114,9 @@
     <Compile Include="Assets\Scipts\PlayerHealth\UnitHealth.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scipts\OnClick\ChangSoundsTrack.cs" />
+    <Compile Include="Assets\Scipts\Level\CowCharecter.cs" />
+    <Compile Include="Assets\Scipts\Managers\ExperienceManager.cs" />
+    <Compile Include="Assets\Scipts\UI\FillLevelBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

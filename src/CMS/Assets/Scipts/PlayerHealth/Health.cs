@@ -5,7 +5,7 @@ public class Health : MonoBehaviour
 {
     public GameObject cow;
 
-    public float maxHealth = 20;
+    public float maxHealth = 50;
     public float currentHealth;
 
     void Start()
@@ -33,6 +33,12 @@ public class Health : MonoBehaviour
         {
             currentHealth = maxHealth;
         }
+    }
+
+    public void LevelUp()
+    {
+        maxHealth += 15;
+        currentHealth = maxHealth;
     }
 
 }
