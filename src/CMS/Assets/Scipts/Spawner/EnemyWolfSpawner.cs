@@ -6,8 +6,8 @@ public class EnemyWolfSpawner : MonoBehaviour
     public Transform[] spawnPoints;
     public GameObject[] enemyWolfPrefabs;
 
-    public float nextActionTime = 4.0f;
-    public float period = 4.1f;
+    public float nextActionTime = 6.0f;
+    public float period = 6.1f;
 
    
     void Update()

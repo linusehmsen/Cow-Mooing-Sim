@@ -13,14 +13,14 @@ public class Animation : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("WolfEnemy"))
+        if (other.CompareTag("WolfEnemy") || other.CompareTag("VampireEnemy"))
         {
          if(circleCollider2D.enabled == true)
             {
                 var WolfhealthComponent = other.GetComponent<EnemyVampireDie>();
                 if (WolfhealthComponent != null)
                 {
-                    WolfhealthComponent.TakeDamage(1f);
+                    WolfhealthComponent.TakeDamage(2.5f);
                 }
             }
         }

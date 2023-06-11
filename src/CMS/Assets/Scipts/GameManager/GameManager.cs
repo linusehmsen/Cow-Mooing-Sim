@@ -1,36 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
-    
+    [Header("Component")]
+    public TextMeshProUGUI timerText;
 
-    //[System.Obsolete]
-    //private void Start()
-    //{
-     //   StartCoroutine(VampireSpawnWait());
-    //}
+    [Header("Timer Settings")]
+    public float currentTime;
+    public bool countDown;
 
-    //private void Update()
-   // {
-   //     
-   // }
+    [Header("Format Settings")]
+    public bool hasFormat;
+    public TimerFormats format;
+    private Dictionary<TimerFormats, string> timeFormats = new Dictionary<TimerFormats, string>();
 
-   // [System.Obsolete]
-   // IEnumerator VampireSpawnWait()
-   // {
-
-    //    var vampire = GameObject.Find("EnemyWolfSpawner").GetComponent<EnemyVampireSpawner>();
-   //     vampire.enabled = false;
-
-    //    yield return new WaitForSeconds(45);
-    //
-    //    vampire.enabled = true;
-    //}
 
 
     public static GameManager gameManager { get; private set; }
+
+
+    private void Start()
+    {
+        timeFormats.Add(TimerFormats.Whole, "0");
+        timeFormats.Add(TimerFormats.TenthDecimal, "0.0");
+        timeFormats.Add(TimerFormats.HundrethsDecimal, "0.00");
+    }
+
+    private void Update()
+    {
+        currentTime = countDown ? currentTime -= Time.deltaTime : currentTime += Time.deltaTime;
+        timerText.text = hasFormat ? currentTime.ToString(timeFormats[format]) : currentTime.ToString();
+    }
 
     void Awake()
     {
@@ -43,4 +45,11 @@ public class GameManager : MonoBehaviour
             gameManager = this;
         }
     }
+}
+
+public enum TimerFormats
+{
+    Whole,
+    TenthDecimal,
+    HundrethsDecimal
 }

@@ -12,7 +12,6 @@ public class KillCow : MonoBehaviour
             if(other != _circleCollider2D)
             {
                 var healthComponent = other.GetComponent<Health>();
-                
                 if (healthComponent != null)
                 {
                     healthComponent.TakeDamage(1);

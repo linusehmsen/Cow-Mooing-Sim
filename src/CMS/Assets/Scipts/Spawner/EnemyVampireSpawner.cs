@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyVampireSpawner : MonoBehaviour
@@ -6,24 +7,42 @@ public class EnemyVampireSpawner : MonoBehaviour
     public Transform[] spawnPoints;
     public GameObject[] enemyVampirePrefabs;
 
-    public float nextActionTime = 5.0f;
-    public float period = 5.1f;
+    public float nextAction = 10.0f;
+    public float period = 10.1f;
 
 
+    private void Start()
+    {
+        InvokeRepeating("SpawnVampire", 45, Random.Range(0,10));
+        //var vampireSpawner = GetComponent<EnemyVampireSpawner>()
+    }
+
+    [System.Obsolete]
     void Update()
     {
-        if (Time.time > nextActionTime)
-        {
+        DeleteSpawner();
+    }
 
-            nextActionTime += period;
-            int randEnemyWolf = Random.Range(0, enemyVampirePrefabs.Length);
-            int randSpawnPoint = Random.Range(0, enemyVampirePrefabs.Length);
-
-            Instantiate(enemyVampirePrefabs[randEnemyWolf], spawnPoints[randSpawnPoint].position, transform.rotation);
-        }
+    void DeleteSpawner()
+    {
         if (enemyVampirePrefabs[0] == null)
         {
             Destroy(gameObject);
         }
+    }
+
+    Vector3 getRandomPosition()
+    {
+        float _x = Random.Range(-10, 9);
+        float _y = Random.Range(-4, 4);
+        float _z = Random.Range(0, 0);
+
+        Vector3 newPos = new Vector3(_x, _y, _z);
+        return newPos;
+    }
+
+    void SpawnVampire()
+    {
+        Instantiate(enemyVampirePrefabs[Random.Range(0,2)], getRandomPosition(), Quaternion.identity);
     }
 }

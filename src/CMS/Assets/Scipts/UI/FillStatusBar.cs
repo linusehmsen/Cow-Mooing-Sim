@@ -28,7 +28,7 @@ public class FillStatusBar : MonoBehaviour
 
         if (slider.value > slider.maxValue)
         {
-            slider.value = 50;
+            slider.value = slider.maxValue;
         }
         
         float fillValue = playerHealth.currentHealth / playerHealth.maxHealth;
