@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CowCharecter : MonoBehaviour
 {
-    [SerializeField]
-    int currentExperience, maxExperience,
-        currentLevel;
+    int currentExperience;
+    int maxExperience;
+    int currentLevel;
 
     private void OnEnable()
     {

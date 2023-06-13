@@ -3,18 +3,12 @@ using UnityEngine;
 
 public class EnemyVampireSpawner : MonoBehaviour
 {
-
-    public Transform[] spawnPoints;
     public GameObject[] enemyVampirePrefabs;
-
-    public float nextAction = 10.0f;
-    public float period = 10.1f;
 
 
     private void Start()
     {
-        InvokeRepeating("SpawnVampire", 45, Random.Range(0,10));
-        //var vampireSpawner = GetComponent<EnemyVampireSpawner>()
+        InvokeRepeating("SpawnVampire", 45, Random.Range(0,15));
     }
 
     [System.Obsolete]

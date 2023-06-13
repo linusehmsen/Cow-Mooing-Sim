@@ -427,7 +427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413ffa554b2bed94f86d97e5949bc032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expAmount: 15
 --- !u!1 &90364422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2601,7 +2600,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413ffa554b2bed94f86d97e5949bc032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expAmount: 15
 --- !u!1 &443064619
 GameObject:
   m_ObjectHideFlags: 0
@@ -5932,7 +5930,7 @@ GameObject:
   - component: {fileID: 1499759917}
   - component: {fileID: 1499759916}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasSliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8389,9 +8387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1b0e58fe6d327f439c837da45cce1fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentExperience: 0
-  maxExperience: 100
-  currentLevel: 1
 --- !u!1 &1849384295
 GameObject:
   m_ObjectHideFlags: 0
@@ -8402,6 +8397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1849384296}
   - component: {fileID: 1849384297}
+  - component: {fileID: 1849384298}
   m_Layer: 5
   m_Name: Level
   m_TagString: Untagged
@@ -8482,6 +8478,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1849384298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849384295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade3cb833ad16d746ba698ba3f79f787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1865577120
 GameObject:
   m_ObjectHideFlags: 0
@@ -8846,7 +8854,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 413ffa554b2bed94f86d97e5949bc032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expAmount: 15
 --- !u!1 &1970754892
 GameObject:
   m_ObjectHideFlags: 0
