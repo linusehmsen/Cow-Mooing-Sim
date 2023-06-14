@@ -3,15 +3,18 @@ using UnityEngine;
 public class PlayOnClick : MonoBehaviour
 {
     public AudioSource MOOO;
+    public Canvas pauseMenu;
 
 
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if(pauseMenu.enabled == false)
         {
-            
-            MOOO.Play();
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                MOOO.Play();
+            }
         }
     }
 }

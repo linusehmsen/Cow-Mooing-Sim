@@ -2,23 +2,30 @@ using UnityEngine;
 
 public class HealthPackageSpawner : MonoBehaviour
 {
-    public Transform[] spawnPoints;
     public GameObject[] healthPackagePrefabs;
 
-    public float nextActionTime = 25.0f;
-    public float period = 25.1f;
-    
+    public Canvas pauseMenu;
 
-    void Update()
+
+    private void Start()
     {
-        if (Time.time > nextActionTime)
+        InvokeRepeating("SpawnHealthPackages", Random.Range(0,20), Random.Range(0, 20));
+    }
+    Vector3 getRandomPosition()
+    {
+        float _x = Random.Range(-10, 9);
+        float _y = Random.Range(-4, 4);
+        float _z = Random.Range(0, 0);
+
+        Vector3 newPos = new Vector3(_x, _y, _z);
+        return newPos;
+    }
+
+    void SpawnHealthPackages()
+    {
+        if(pauseMenu.enabled == false)
         {
-
-            nextActionTime += period;
-            int randHealthPackages = Random.Range(0, healthPackagePrefabs.Length);
-            int randSpawnPoint = Random.Range(0, spawnPoints.Length);
-
-            Instantiate(healthPackagePrefabs[randHealthPackages], spawnPoints[randSpawnPoint].position, transform.rotation);
+            Instantiate(healthPackagePrefabs[0], getRandomPosition(), Quaternion.identity);
         }
     }
 }

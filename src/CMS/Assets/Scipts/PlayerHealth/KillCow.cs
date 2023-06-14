@@ -3,18 +3,22 @@ using UnityEngine;
 public class KillCow : MonoBehaviour
 {
     public CircleCollider2D _circleCollider2D;
+    public Canvas pauseMenu;
 
     [System.Obsolete]
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if(pauseMenu.enabled == false)
         {
-            if(other != _circleCollider2D)
+            if (other.CompareTag("Player"))
             {
-                var healthComponent = other.GetComponent<Health>();
-                if (healthComponent != null)
+                if (other != _circleCollider2D)
                 {
-                    healthComponent.TakeDamage(1);
+                    var healthComponent = other.GetComponent<Health>();
+                    if (healthComponent != null)
+                    {
+                        healthComponent.TakeDamage(1);
+                    }
                 }
             }
         }

@@ -5,13 +5,14 @@ public class EnemyVampireSpawner : MonoBehaviour
 {
     public GameObject[] enemyVampirePrefabs;
 
+    public Canvas pauseMenu;
+
 
     private void Start()
     {
         InvokeRepeating("SpawnVampire", 45, Random.Range(0,15));
     }
 
-    [System.Obsolete]
     void Update()
     {
         DeleteSpawner();
@@ -37,6 +38,9 @@ public class EnemyVampireSpawner : MonoBehaviour
 
     void SpawnVampire()
     {
-        Instantiate(enemyVampirePrefabs[Random.Range(0,2)], getRandomPosition(), Quaternion.identity);
+        if(pauseMenu.enabled == false)
+        {
+            Instantiate(enemyVampirePrefabs[Random.Range(0, 2)], getRandomPosition(), Quaternion.identity);
+        }
     }
 }

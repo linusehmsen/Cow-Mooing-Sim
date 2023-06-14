@@ -12,7 +12,7 @@ public class FillStatusBar : MonoBehaviour
     {
         slider = GetComponent<Slider>();
     }
-
+    
     // Update is called once per frame
     void Update()
     {

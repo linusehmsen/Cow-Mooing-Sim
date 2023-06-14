@@ -5,6 +5,9 @@ public class AIWolfChase : MonoBehaviour
 
     public GameObject cow;
     public float speed;
+    public Canvas pauseMenu;
+
+    public Rigidbody2D _rigidbody2D;
 
     private float distance;
 
@@ -12,14 +15,25 @@ public class AIWolfChase : MonoBehaviour
     [System.Obsolete]
     void Update()
     {
-        distance = Vector2.Distance(transform.position, cow.transform.position);
-        Vector2 direction = cow.transform.position - transform.position;
-
-        transform.position = Vector2.MoveTowards(this.transform.position, cow.transform.position, speed * Time.deltaTime);
-
-        if (cow.active != true)
+        if(pauseMenu.enabled == false)
         {
-            Destroy(gameObject);
+            distance = Vector2.Distance(transform.position, cow.transform.position);
+            Vector2 direction = cow.transform.position - transform.position;
+
+            transform.position = Vector2.MoveTowards(this.transform.position, cow.transform.position, speed * Time.deltaTime);
+
+            if (cow.active != true)
+            {
+                Destroy(gameObject);
+            }
+        }
+        if(pauseMenu.enabled == true)
+        {
+            _rigidbody2D.simulated = false;
+        }
+        if (pauseMenu.enabled == false)
+        {
+            _rigidbody2D.simulated = true;
         }
     }
 }

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CowCharecter : MonoBehaviour
 {
-    int currentExperience;
-    int maxExperience;
-    int currentLevel;
+    public int currentExperience;
+    public int maxExperience;
+    public int currentLevel;
 
     private void OnEnable()
     {
@@ -23,9 +23,9 @@ public class CowCharecter : MonoBehaviour
         currentExperience += newExperience;
         if(currentExperience >= maxExperience)
         {
-            var cowHealth = GetComponent<Health>();
-            cowHealth.LevelUp();
-            LevelUpCow();
+            //var cowHealth = GetComponent<Health>();
+            //cowHealth.LevelUp();
+            //LevelUpCow();
         }
     }
     

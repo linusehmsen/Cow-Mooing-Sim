@@ -6,21 +6,21 @@ public class EnemyWolfSpawner : MonoBehaviour
     public Transform[] spawnPoints;
     public GameObject[] enemyWolfPrefabs;
 
-    public float nextActionTime = 6.0f;
-    public float period = 6.1f;
+    public Canvas pauseMenu;
 
-   
+
+    private void Start()
+    {
+        InvokeRepeating("SpawnWolf", 0, Random.Range(0,5));
+    }
+
     void Update()
     {
-        if (Time.time > nextActionTime)
-        {
+        DeleteSpawner();
+    }
 
-            nextActionTime += period;
-            int randEnemyWolf = Random.Range(0, enemyWolfPrefabs.Length);
-            int randSpawnPoint = Random.Range(0, enemyWolfPrefabs.Length);
-
-            Instantiate(enemyWolfPrefabs[randEnemyWolf], spawnPoints[randSpawnPoint].position, transform.rotation);
-        }
+    void DeleteSpawner()
+    {
         if (enemyWolfPrefabs[0] == null)
         {
             Destroy(gameObject);
@@ -32,6 +32,24 @@ public class EnemyWolfSpawner : MonoBehaviour
         if (enemyWolfPrefabs[2] == null)
         {
             Destroy(gameObject);
+        }
+    }
+
+    Vector3 getRandomPosition()
+    {
+        float _x = Random.Range(-10, 9);
+        float _y = Random.Range(-4, 4);
+        float _z = Random.Range(0, 0);
+
+        Vector3 newPos = new Vector3(_x, _y, _z);
+        return newPos;
+    }
+
+    void SpawnWolf()
+    {
+        if(pauseMenu.enabled == false)
+        {
+            Instantiate(enemyWolfPrefabs[Random.Range(0, 2)], getRandomPosition(), Quaternion.identity);
         }
     }
 }

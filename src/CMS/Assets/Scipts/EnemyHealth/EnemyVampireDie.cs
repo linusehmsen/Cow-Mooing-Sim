@@ -5,7 +5,7 @@ public class EnemyVampireDie : MonoBehaviour
     public float health;
     public float maxHealth = 400f;
 
-    int expAmount = 15;
+    //int expAmount = 15;
 
     private void Start()
     {
@@ -19,7 +19,8 @@ public class EnemyVampireDie : MonoBehaviour
         if (health <= 0)
         {
             Destroy(gameObject);
-            ExperienceManager.Instance.AddExperience(expAmount);
+            GameManager.gameManager.ScoreText();
+            //ExperienceManager.Instance.AddExperience(expAmount);
         }
     }
 
