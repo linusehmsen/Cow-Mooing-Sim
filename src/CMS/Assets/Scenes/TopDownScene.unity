@@ -1004,7 +1004,7 @@ MonoBehaviour:
   - {fileID: 235077945}
   - {fileID: 235077945}
   - {fileID: 235077945}
-  pauseMenu: {fileID: 0}
+  pauseMenu: {fileID: 444097759}
 --- !u!1 &125660176
 GameObject:
   m_ObjectHideFlags: 0
@@ -7947,7 +7947,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1444963421
 MonoBehaviour:
@@ -10900,7 +10900,7 @@ Transform:
   m_Children:
   - {fileID: 364453687}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1827859477
 MonoBehaviour:
@@ -12094,7 +12094,7 @@ Transform:
   - {fileID: 742993922}
   - {fileID: 1416775630}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2044852565
 GameObject:
