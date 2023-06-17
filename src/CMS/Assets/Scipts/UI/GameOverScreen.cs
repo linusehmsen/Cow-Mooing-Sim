@@ -25,15 +25,15 @@ public class GameOverScreen : MonoBehaviour
     
     void Show()
     {
-        gameOverScreen.enabled = !cow.activeInHierarchy;
-        //if (cow.activeInHierarchy != true)
-        //{
-        //    gameOverScreen.enabled = true;
-        //}
-        //if (cow.activeInHierarchy != false)
-        //{
-        //    gameOverScreen.enabled = false;
-        //}
+        //gameOverScreen.enabled = !cow.activeInHierarchy;
+        if (cow.activeInHierarchy != true)
+        {
+            gameOverScreen.enabled = true;
+        }
+        if (cow.activeInHierarchy != false)
+        {
+            gameOverScreen.enabled = false;
+        }
     }
     
     public void Retry()

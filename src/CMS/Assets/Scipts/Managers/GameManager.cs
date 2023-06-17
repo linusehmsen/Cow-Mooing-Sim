@@ -5,20 +5,11 @@ using Unity.VisualScripting;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager gameManager { get; private set; }
+
     [Header("GameObjects")]
     public GameObject cow;
-
-    [Header("Final" + "Score" + "Component")]
-    public TextMeshProUGUI finalScore;
-
-    [Header("Final" + "Score" + "Settings")]
-    public int finalScoreInt;
-
-    [Header("Final" + "Time" + "Component")]
-    public TextMeshProUGUI finalTime;
-
-    [Header("Final" + "Time" + "Settings")]
-    public float finalTimeFloat;
+    public GameObject gameOverScreenGameObject;
 
     [Header("Score" + "Text" + "Component")]
     public TextMeshProUGUI scoreText;
@@ -42,30 +33,17 @@ public class GameManager : MonoBehaviour
     public Canvas pauseMenu;
 
 
-
-    public static GameManager gameManager { get; private set; }
-
-
     private void Start()
     {
+        gameOverScreenGameObject.SetActive(true);
+
         timeFormats.Add(TimerFormats.Whole, "0");
         timeFormats.Add(TimerFormats.TenthDecimal, "0.0");
         timeFormats.Add(TimerFormats.HundrethsDecimal, "0.00");
     }
     private void Update()
     {
-        if(pauseMenu.enabled == true)
-        {
-            if (cow.activeInHierarchy != false)
-            {
-                currentTime = countDown ? currentTime -= Time.deltaTime : currentTime += Time.deltaTime;
-                timerText.text = hasFormat ? currentTime.ToString(timeFormats[format]) : currentTime.ToString();
-            }
-            if (cow.activeInHierarchy != true)
-            {
-                timerText.text = currentTime.ToString(timeFormats[format]);
-            }
-        }
+        Timer();
     }
 
     void Awake()
@@ -85,6 +63,24 @@ public class GameManager : MonoBehaviour
         currentScore = currentScore + 1;
         scoreText.text = currentScore.ToString();
     }
+    
+    public void Timer()
+    {
+        if (pauseMenu.enabled == false)
+        {
+            if (cow.activeInHierarchy != false)
+            {
+                currentTime = countDown ? currentTime -= Time.deltaTime : currentTime += Time.deltaTime;
+                timerText.text = hasFormat ? currentTime.ToString(timeFormats[format]) : currentTime.ToString();
+            }
+            if (cow.activeInHierarchy != true)
+            {
+                timerText.text = currentTime.ToString(timeFormats[format]);
+            }
+        }
+    }
+
+     
 }
 
 public enum TimerFormats

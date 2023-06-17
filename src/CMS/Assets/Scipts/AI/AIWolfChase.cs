@@ -12,7 +12,7 @@ public class AIWolfChase : MonoBehaviour
     private float distance;
 
 
-    [System.Obsolete]
+    
     void Update()
     {
         if (pauseMenu.enabled == false)
@@ -22,18 +22,20 @@ public class AIWolfChase : MonoBehaviour
 
             transform.position = Vector2.MoveTowards(this.transform.position, cow.transform.position, speed * Time.deltaTime);
 
-            if (cow.active != true)
+            if (cow.activeInHierarchy != true)
             {
                 Destroy(gameObject);
             }
         }
-        if (pauseMenu.enabled == true)
-        {
-            _rigidbody2D.simulated = false;
-        }
-        if (pauseMenu.enabled == false)
-        {
-            _rigidbody2D.simulated = true;
-        }
+
+        _rigidbody2D.simulated = !pauseMenu.enabled == true;
+        //if (pauseMenu.enabled == true)
+        //{
+        //    _rigidbody2D.simulated = false;
+        //}
+        //if (pauseMenu.enabled == false)
+        //{
+        //    _rigidbody2D.simulated = true;
+        //}
     }
 }

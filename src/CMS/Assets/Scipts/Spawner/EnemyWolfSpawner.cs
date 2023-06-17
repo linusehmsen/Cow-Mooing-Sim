@@ -11,7 +11,7 @@ public class EnemyWolfSpawner : MonoBehaviour
 
     private void Start()
     {
-        InvokeRepeating("SpawnWolf", 0, Random.Range(0,5));
+        InvokeRepeating("SpawnWolf", 1, Random.Range(3,8));
     }
 
     void Update()

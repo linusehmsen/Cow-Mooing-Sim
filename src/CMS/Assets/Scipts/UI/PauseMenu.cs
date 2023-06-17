@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -37,5 +38,14 @@ public class PauseMenu : MonoBehaviour
         {
             pauseMenu.enabled = true;
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            pauseMenu.enabled = false;
+        }
+    }
+
+    IEnumerator PauseMenuTrue()
+    {
+        yield return new WaitForSeconds(1f);
     }
 }

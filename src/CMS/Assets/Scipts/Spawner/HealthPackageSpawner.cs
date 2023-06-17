@@ -13,8 +13,8 @@ public class HealthPackageSpawner : MonoBehaviour
     }
     Vector3 getRandomPosition()
     {
-        float _x = Random.Range(-10, 9);
-        float _y = Random.Range(-4, 4);
+        float _x = Random.Range(-8, 9);
+        float _y = Random.Range(-2, 4);
         float _z = Random.Range(0, 0);
 
         Vector3 newPos = new Vector3(_x, _y, _z);
@@ -25,7 +25,7 @@ public class HealthPackageSpawner : MonoBehaviour
     {
         if(pauseMenu.enabled == false)
         {
-            Instantiate(healthPackagePrefabs[0], getRandomPosition(), Quaternion.identity);
+            Instantiate(healthPackagePrefabs[Random.Range(0,2)], getRandomPosition(), Quaternion.identity);
         }
     }
 }

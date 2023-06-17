@@ -34,11 +34,4 @@ public class Health : MonoBehaviour
             currentHealth = maxHealth;
         }
     }
-
-    public void LevelUp()
-    {
-        maxHealth += 15;
-        currentHealth = maxHealth;
-    }
-
 }
