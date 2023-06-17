@@ -528,11 +528,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 63307486}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 494563bcd2e90904d933fc692d5b66b8, type: 3}
+  m_Script: {fileID: 11500000, guid: ca0a649452fc3b347960c57454bce427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _circleCollider2D: {fileID: 364453686}
-  pauseMenu: {fileID: 444097759}
 --- !u!114 &63307505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3010,11 +3008,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 420160607}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 494563bcd2e90904d933fc692d5b66b8, type: 3}
+  m_Script: {fileID: 11500000, guid: ca0a649452fc3b347960c57454bce427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _circleCollider2D: {fileID: 364453686}
-  pauseMenu: {fileID: 444097759}
 --- !u!114 &420160626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11740,11 +11736,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1948305256}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 494563bcd2e90904d933fc692d5b66b8, type: 3}
+  m_Script: {fileID: 11500000, guid: ca0a649452fc3b347960c57454bce427, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _circleCollider2D: {fileID: 364453686}
-  pauseMenu: {fileID: 444097759}
 --- !u!114 &1948305275
 MonoBehaviour:
   m_ObjectHideFlags: 0

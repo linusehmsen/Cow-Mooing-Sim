@@ -11,11 +11,11 @@ public class AIWolfChase : MonoBehaviour
 
     private float distance;
 
-    
+
     [System.Obsolete]
     void Update()
     {
-        if(pauseMenu.enabled == false)
+        if (pauseMenu.enabled == false)
         {
             distance = Vector2.Distance(transform.position, cow.transform.position);
             Vector2 direction = cow.transform.position - transform.position;
@@ -27,7 +27,7 @@ public class AIWolfChase : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        if(pauseMenu.enabled == true)
+        if (pauseMenu.enabled == true)
         {
             _rigidbody2D.simulated = false;
         }
