@@ -7,6 +7,7 @@ public class EnemyWolfSpawner : MonoBehaviour
     public GameObject[] enemyWolfPrefabs;
 
     public Canvas pauseMenu;
+    public Canvas startMenu;
 
 
     private void Start()
@@ -47,7 +48,7 @@ public class EnemyWolfSpawner : MonoBehaviour
 
     void SpawnWolf()
     {
-        if(pauseMenu.enabled == false)
+        if(pauseMenu.enabled == false || startMenu.enabled == false)
         {
             Instantiate(enemyWolfPrefabs[Random.Range(0, 2)], getRandomPosition(), Quaternion.identity);
         }

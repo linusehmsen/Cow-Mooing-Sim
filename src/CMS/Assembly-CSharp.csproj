@@ -120,6 +120,8 @@
     <Compile Include="Assets\Scipts\PlayerHealth\UnitHealth.cs" />
     <Compile Include="Assets\Scipts\UI\FillLevelBar.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
+    <Compile Include="Assets\Scipts\UI\MainMenu.cs" />
+    <Compile Include="Assets\Scipts\UI\StartMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

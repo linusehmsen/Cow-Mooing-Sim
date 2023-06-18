@@ -3,7 +3,9 @@ using UnityEngine;
 public class Animation : MonoBehaviour
 {
     public CircleCollider2D circleCollider2D;
+    
     public Canvas pauseMenu;
+    public Canvas startMenu;
 
 
 
@@ -14,7 +16,7 @@ public class Animation : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(pauseMenu.enabled == false)
+        if(pauseMenu.enabled == false || startMenu.enabled == false)
         {
             if (other.CompareTag("WolfEnemy") || other.CompareTag("VampireEnemy"))
             {

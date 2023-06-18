@@ -43,9 +43,4 @@ public class PauseMenu : MonoBehaviour
             pauseMenu.enabled = false;
         }
     }
-
-    IEnumerator PauseMenuTrue()
-    {
-        yield return new WaitForSeconds(1f);
-    }
 }

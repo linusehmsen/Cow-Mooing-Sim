@@ -6,6 +6,7 @@ public class AIWolfChase : MonoBehaviour
     public GameObject cow;
     public float speed;
     public Canvas pauseMenu;
+    public Canvas startMenu;
 
     public Rigidbody2D _rigidbody2D;
 
@@ -15,7 +16,7 @@ public class AIWolfChase : MonoBehaviour
     
     void Update()
     {
-        if (pauseMenu.enabled == false)
+        if (pauseMenu.enabled == false || startMenu.enabled == false)
         {
             distance = Vector2.Distance(transform.position, cow.transform.position);
             Vector2 direction = cow.transform.position - transform.position;

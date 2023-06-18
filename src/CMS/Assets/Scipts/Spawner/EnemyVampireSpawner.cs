@@ -6,6 +6,7 @@ public class EnemyVampireSpawner : MonoBehaviour
     public GameObject[] enemyVampirePrefabs;
 
     public Canvas pauseMenu;
+    public Canvas startMenu;
 
 
     private void Start()
@@ -38,7 +39,7 @@ public class EnemyVampireSpawner : MonoBehaviour
 
     void SpawnVampire()
     {
-        if(pauseMenu.enabled == false)
+        if(pauseMenu.enabled == false || startMenu.enabled == false)
         {
             Instantiate(enemyVampirePrefabs[Random.Range(0, 2)], getRandomPosition(), Quaternion.identity);
         }
