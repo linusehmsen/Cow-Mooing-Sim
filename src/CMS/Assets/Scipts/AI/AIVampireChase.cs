@@ -7,7 +7,6 @@ public class AIVampireChase : MonoBehaviour
     public float speed;
     
     public Canvas pauseMenu;
-    public Canvas startMenu;
 
     public Rigidbody2D _rigidbody2D;
 
@@ -15,7 +14,7 @@ public class AIVampireChase : MonoBehaviour
 
     void Update()
     {
-        if(pauseMenu.enabled == false || startMenu.enabled == false)
+        if(pauseMenu.enabled == false)
         {
             float distance = Vector2.Distance(transform.position, cow.transform.position);
 
@@ -28,11 +27,11 @@ public class AIVampireChase : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        if (pauseMenu.enabled == true || startMenu.enabled == true)
+        if (pauseMenu.enabled == true)
         {
             _rigidbody2D.simulated = false;
         }
-        if(pauseMenu.enabled == false || startMenu.enabled == false)
+        if(pauseMenu.enabled == false)
         {
             _rigidbody2D.simulated = true;
         }

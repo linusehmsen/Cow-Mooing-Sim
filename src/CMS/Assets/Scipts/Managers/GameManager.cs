@@ -30,7 +30,6 @@ public class GameManager : MonoBehaviour
 
     [Header("UI")]
     public Canvas pauseMenu;
-    public Canvas startMenu;
 
 
     private void Start()
@@ -66,7 +65,7 @@ public class GameManager : MonoBehaviour
     
     public void Timer()
     {
-        if (pauseMenu.enabled == false || startMenu.enabled == false)
+        if (pauseMenu.enabled == false)
         {
             if (cow.activeInHierarchy != false)
             {

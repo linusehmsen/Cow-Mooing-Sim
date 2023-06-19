@@ -5,7 +5,6 @@ public class HealthPackageSpawner : MonoBehaviour
     public GameObject[] healthPackagePrefabs;
 
     public Canvas pauseMenu;
-    public Canvas startMenu;
 
 
     private void Start()
@@ -24,7 +23,7 @@ public class HealthPackageSpawner : MonoBehaviour
 
     void SpawnHealthPackages()
     {
-        if(pauseMenu.enabled == false || startMenu.enabled == false)
+        if(pauseMenu.enabled == false)
         {
             Instantiate(healthPackagePrefabs[Random.Range(0,2)], getRandomPosition(), Quaternion.identity);
         }

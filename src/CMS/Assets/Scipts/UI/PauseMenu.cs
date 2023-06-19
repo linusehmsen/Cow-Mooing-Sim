@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
     [Header("UI")]
     public Canvas pauseMenu;
 
+    [System.Obsolete]
     private void Start()
     {
         pauseMenu.enabled = false;
@@ -15,6 +16,18 @@ public class PauseMenu : MonoBehaviour
     private void Update()
     {
         EnablePauseMenu();
+    }
+    
+    void EnablePauseMenu()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseMenu.enabled = true;
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            pauseMenu.enabled = false;
+        }
     }
 
     public void ResumeGame()
@@ -30,17 +43,5 @@ public class PauseMenu : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-    }
-
-    void EnablePauseMenu()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            pauseMenu.enabled = true;
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            pauseMenu.enabled = false;
-        }
     }
 }

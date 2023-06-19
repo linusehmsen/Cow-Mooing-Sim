@@ -2,12 +2,9 @@ using UnityEngine;
 
 public class EnemyWolfSpawner : MonoBehaviour
 {
-
-    public Transform[] spawnPoints;
     public GameObject[] enemyWolfPrefabs;
 
     public Canvas pauseMenu;
-    public Canvas startMenu;
 
 
     private void Start()
@@ -48,7 +45,7 @@ public class EnemyWolfSpawner : MonoBehaviour
 
     void SpawnWolf()
     {
-        if(pauseMenu.enabled == false || startMenu.enabled == false)
+        if(pauseMenu.enabled == false)
         {
             Instantiate(enemyWolfPrefabs[Random.Range(0, 2)], getRandomPosition(), Quaternion.identity);
         }
