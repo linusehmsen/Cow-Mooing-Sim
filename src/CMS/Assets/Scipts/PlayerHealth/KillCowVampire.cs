@@ -14,7 +14,7 @@ public class KillCowVampire : MonoBehaviour
                 var healthComponent = other.GetComponent<Health>();
                 if (healthComponent != null)
                 {
-                    healthComponent.TakeDamage(2.5f);
+                    healthComponent.TakeDamage(2);
                 }
             }
         }

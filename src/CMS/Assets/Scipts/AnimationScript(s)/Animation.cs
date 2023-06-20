@@ -24,11 +24,21 @@ public class Animation : MonoBehaviour
                     var WolfhealthComponent = other.GetComponent<EnemyVampireDie>();
                     if (WolfhealthComponent != null)
                     {
-                        WolfhealthComponent.TakeDamage(1.5f);
+                        WolfhealthComponent.TakeDamage(1.3f);
                     }
                 }
             }
-            if(other.CompareTag("VampireEnemy"))
+            if (other.CompareTag("VampireEnemy"))
+            {
+                if (circleCollider2D.enabled == true)
+                {
+                    var WolfhealthComponent = other.GetComponent<EnemyVampireDie>();
+                    if (WolfhealthComponent != null)
+                    {
+                        WolfhealthComponent.TakeDamage(2f);
+                    }
+                }
+            }
         }
     }
 }
