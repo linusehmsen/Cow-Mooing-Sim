@@ -17,7 +17,7 @@ public class Animation : MonoBehaviour
     {
         if(pauseMenu.enabled == false)
         {
-            if (other.CompareTag("WolfEnemy") || other.CompareTag("VampireEnemy"))
+            if (other.CompareTag("WolfEnemy"))
             {
                 if (circleCollider2D.enabled == true)
                 {
@@ -28,6 +28,7 @@ public class Animation : MonoBehaviour
                     }
                 }
             }
+            if(other.CompareTag("VampireEnemy"))
         }
     }
 }
